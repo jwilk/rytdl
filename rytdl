@@ -19,7 +19,6 @@ host="$1"
 shift
 ssh "$host" "
 set -e -u
-set -x
 mkdir ${tmpdir@Q}
 cd ${tmpdir@Q}
 bash --login -c 'exec youtube-dl \"\$@\"' - ${*@Q}
